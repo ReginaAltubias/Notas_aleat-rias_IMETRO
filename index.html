@@ -9,14 +9,13 @@
 <body style="font-family: Arial, sans-serif;">
     <div class="container" id="wave-effect" id="container">
         <!-- Lado esquerdo com o formulário e logotipo -->
-
         <div class="left-side"> 
             <!-- Logotipo no topo -->
             <div class="logo-container">
-                <img src="unnamed.png" alt="Logo_do_Imetro" class="logo" style="padding: 5%;width:150px ;;">
+                <img src="unnamed.png" alt="Logo_do_Imetro" class="logo" style="padding: 5%;width:150px ;">
             </div>
             <form id="studentForm">
-               <div class="titulo"><center><h2 style="font-size: 200%;"> LCC3T DA IMETRO</h2><br></center></div>
+               <div class="titulo"><h2 style="font-size: 200%;"> LCC3T DA IMETRO</h2><br></div>
                 <div class="form-group">
                     <label for="name">Nome do Estudante</label>
                     <input type="text" id="name" placeholder="Nome do estudante">
@@ -31,7 +30,6 @@
                     <button type="button" onclick="saveGrades()">Guardar</button>
                     <button type="button" onclick="viewGrades()">Consultar</button>
                 </div>
-               
             </form>
             <div id="relogio"></div>
         </div>
@@ -41,22 +39,30 @@
         <div class="right-side">
             <img src="http://www.imetroangola.com/img/3.jpeg" alt="Imagem Animada">
 
-
              <!-- Janela popup para exibir as notas -->
             <div id="popup" class="popup">
                 <div class="popup-content">
                     <span class="close" onclick="closePopup()">&times;</span>
                     <h3>Notas dos Estudantes</h3>
-                    <ul id="resultList"></ul>
+                    <table id="resultTable"  style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Matrícula</th>
+                                <th>Nota</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 
-   
-
     <footer>
-        &copy; LCC3M Angola 2024 <a href="https://github.com/ReginaAltubias">By Altubias</a>
+        &copy; LCC3M Angola 2024 <a href="#">By R.M.S.H</a>
     </footer>
     <script src="script.js"></script>
 </body>
